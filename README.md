@@ -79,7 +79,7 @@ adb reverse tcp:8000 tcp:8000
 ```
 Build and run the app from Android Studio!
 
-## ScreenShots:
+## ScreenShots:New
 <img width="1080" height="2460" alt="WhatsApp Image 2026-05-24 at 7 12 59 PM" src="https://github.com/user-attachments/assets/285a1fd6-74f6-4c1e-85ef-e1dde57f7c94" />
 <img width="1080" height="2460" alt="WhatsApp Image 2026-05-24 at 7 12 58 PM" src="https://github.com/user-attachments/assets/e22cf19b-10ba-443c-98c9-fdc614ed7681" />
 <img width="1080" height="2460" alt="WhatsApp Image 2026-05-24 at 7 12 58 PM (1)" src="https://github.com/user-attachments/assets/63b728ab-64f9-431b-8e7f-e90a4594d189" />

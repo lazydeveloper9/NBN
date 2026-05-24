@@ -26,7 +26,7 @@ Instead of a single monolithic AI, the app utilizes a specialized team of autono
 
 ### 📱 Autonomous Order & Inventory Management
 * **WhatsApp Bot Integration:** Customers order via WhatsApp; the bot checks inventory, creates the order, and sends payment links autonomously.
-* **Smart Inventory:** Take a picture of new shipments; Vision AI identifies, counts, and updates the ERP database.
+* **Smart Vault (Inventory):** A live-synced inventory grid. Use the built-in Android camera to snap photos of new shipments; the app encodes it to base64, pushes it to the Python backend, and the Ops Agent uses Vision AI to identify, count, and update the SQLite/PostgreSQL database instantly. Includes instant 1-click supply ordering from Dealers directly in the app.
 
 ---
 
@@ -41,7 +41,7 @@ Instead of a single monolithic AI, the app utilizes a specialized team of autono
 * **Database:** PostgreSQL (Relational ERP) + Pinecone/Weaviate (Vector DB for AI memory)
 
 ### AI & Agentic Framework
-* **LLM Engine:** Gemini 1.5 Pro / Flash
+* **LLM Engine:** Gemini 2.5 Flash Lite (LangChain `ChatGoogleGenerativeAI`)
 * **Agent Framework:** LangChain / LlamaIndex
 * **Communications:** Twilio / Meta WhatsApp Cloud API
 
@@ -51,11 +51,30 @@ Instead of a single monolithic AI, the app utilizes a specialized team of autono
 
 *(Note: These are placeholder instructions for the development environment)*
 
-### Prerequisites
-* Android Studio Ladybug or newer
-* JDK 17+
-* Google Gemini API Key
-* WhatsApp Business API credentials
+### Installation & Running Locally
 
-### Installation
-1. Clone the repository:
+#### 1. Backend (FastAPI & LangGraph)
+Ensure you have `uv` (the fast Python package installer) installed.
+```bash
+cd backend
+uv sync # Install dependencies
+```
+
+Create a `.env` file in the `backend/` directory:
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+Run the backend server:
+```bash
+uv run uvicorn main:app --reload --host 0.0.0.0
+```
+
+#### 2. Android App (Jetpack Compose)
+Open `android-app` in Android Studio.
+
+If you are running the app on a physical Android device connected via USB, you must bridge the port so the app can talk to `localhost:8000`:
+```bash
+adb reverse tcp:8000 tcp:8000
+```
+Build and run the app from Android Studio!

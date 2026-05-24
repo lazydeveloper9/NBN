@@ -78,3 +78,11 @@ If you are running the app on a physical Android device connected via USB, you m
 adb reverse tcp:8000 tcp:8000
 ```
 Build and run the app from Android Studio!
+
+## ScreenShots:
+<img width="1080" height="2460" alt="WhatsApp Image 2026-05-24 at 7 12 59 PM" src="https://github.com/user-attachments/assets/285a1fd6-74f6-4c1e-85ef-e1dde57f7c94" />
+<img width="1080" height="2460" alt="WhatsApp Image 2026-05-24 at 7 12 58 PM" src="https://github.com/user-attachments/assets/e22cf19b-10ba-443c-98c9-fdc614ed7681" />
+<img width="1080" height="2460" alt="WhatsApp Image 2026-05-24 at 7 12 58 PM (1)" src="https://github.com/user-attachments/assets/63b728ab-64f9-431b-8e7f-e90a4594d189" />
+<img width="702" height="1600" alt="WhatsApp Image 2026-05-24 at 7 12 57 PM" src="https://github.com/user-attachments/assets/0f16a7d2-3b64-4d40-9b43-90d0ea4cea81" />
+<img width="702" height="1600" alt="WhatsApp Image 2026-05-24 at 7 12 57 PM (1)" src="https://github.com/user-attachments/assets/f843af5e-25d1-4980-b224-c993366d13b8" />
+<img width="702" height="1600" alt="WhatsApp Image 2026-05-24 at 7 12 56 PM" src="https://github.com/user-attachments/assets/1ae682ec-50a8-4719-b133-9a82c8071cdd" />

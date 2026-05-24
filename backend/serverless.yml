@@ -1,0 +1,28 @@
+service: nbn-cto-agent
+
+provider:
+  name: aws
+  runtime: python3.11
+  region: us-east-1
+  environment:
+    GEMINI_API_KEY: ${env:GEMINI_API_KEY}
+    DATABASE_URL: ${env:DATABASE_URL}
+    WEAVIATE_URL: ${env:WEAVIATE_URL}
+  
+functions:
+  api:
+    handler: main.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
